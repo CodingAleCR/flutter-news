@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'screens/home.dart';
-import 'screens/detail.dart';
-import 'blocs/stories_provider.dart';
-import 'blocs/comments_provider.dart';
+import 'package:news/src/ui/screens/home.dart';
+import 'package:news/src/ui/screens/detail.dart';
+import 'package:news/src/domain/bloc/comments_provider.dart';
+import 'package:news/src/domain/bloc/stories_provider.dart';
 
 class App extends StatelessWidget {
   @override

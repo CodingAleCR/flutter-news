@@ -5,7 +5,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart';
 
 import 'news_provider.dart';
-import '../models/item_model.dart';
+import 'package:news/src/domain/models/item_model.dart';
 
 class NewsDbProvider implements Source, Cache {
   Database db;

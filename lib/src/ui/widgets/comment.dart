@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import '../models/item_model.dart';
+import 'package:news/src/domain/models/item_model.dart';
 import '../widgets/loading_tile.dart';
 
 class Comment extends StatelessWidget {

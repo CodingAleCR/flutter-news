@@ -1,4 +1,4 @@
-import '../models/item_model.dart';
+import 'package:news/src/domain/models/item_model.dart';
 import 'dart:async';
 
 abstract class Source {

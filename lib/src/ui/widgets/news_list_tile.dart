@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'loading_tile.dart';
-import '../models/item_model.dart';
-import '../blocs/stories_provider.dart';
+import 'package:news/src/domain/models/item_model.dart';
+import 'package:news/src/domain/bloc/stories_provider.dart';
 
 class NewsListTile extends StatelessWidget {
   final int itemId;

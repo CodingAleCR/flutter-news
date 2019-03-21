@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../blocs/stories_provider.dart';
+import 'package:news/src/domain/bloc/stories_provider.dart';
 import '../widgets/news_list_tile.dart';
 import '../widgets/refresh.dart';
 
@@ -12,7 +12,8 @@ class Home extends StatelessWidget {
     // bloc.fetchTopIds();
     return Scaffold(
       appBar: AppBar(
-        title: Text("Top News!"),
+        title: Text("Hacker News"),
+        centerTitle: true,
       ),
       body: buildList(bloc),
     );
