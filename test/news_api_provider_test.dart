@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 import 'package:http/http.dart';
 import 'package:http/testing.dart';
 
-import 'package:news/src/resources/news_api_provider.dart';
+import 'package:news/src/data/news_api_provider.dart';
 
 main() {
   test('fetchTopIds returns a list of IDs.', () async {

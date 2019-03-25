@@ -2,7 +2,8 @@ import 'dart:convert';
 import 'dart:async';
 import 'package:http/http.dart' show Client;
 import 'news_provider.dart';
-import '../models/item_model.dart';
+import 'package:news/src/domain/models/item_model.dart';
+
 
 final _baseUrl = "https://hacker-news.firebaseio.com/v0";
 

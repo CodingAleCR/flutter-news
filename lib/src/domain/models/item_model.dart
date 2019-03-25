@@ -62,4 +62,9 @@ class ItemModel {
       "descendants": descendants,
     };
   }
+
+  @override
+  String toString() {
+    return "Item {$title, $by, $text, $descendants}";
+  }
 }
