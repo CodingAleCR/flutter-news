@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'loading_tile.dart';
 import '../models/item_model.dart';
-import '../blocs/stories_provider.dart';
+import '../blocs/app_provider.dart';
 
 class NewsListTile extends StatelessWidget {
   final int itemId;
@@ -11,7 +11,7 @@ class NewsListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bloc = StoriesProvider.of(context);
+    final bloc = AppProvider.storiesBlocOf(context);
     final loadingTile = LoadingTile();
     return StreamBuilder(
       stream: bloc.items,
@@ -33,19 +33,24 @@ class NewsListTile extends StatelessWidget {
     );
   }
 
-  Widget buildTile(BuildContext context, ItemModel item) {
-    return Card(
-      margin: EdgeInsets.only(top: 4.0, bottom: 4.0, left: 8.0, right: 8.0),
-      child: ListTile(
-        title: Text(item.title),
-        subtitle: Text("${item.score} votes"),
-        trailing: Column(
-          children: <Widget>[Icon(Icons.comment), Text("${item.descendants}")],
+  buildTile(BuildContext context,ItemModel item) {
+    return Column(
+      children: <Widget>[
+        ListTile(
+          title: Text(item.title),
+          subtitle: Text("${item.score} votes"),
+          trailing: Column(
+            children: <Widget>[
+              Icon(Icons.comment),
+              Text("${item.descendants}")
+            ],
+          ),
+          onTap: () {
+            Navigator.pushNamed(context, "/${item.id}");
+          },
         ),
-        onTap: () {
-          Navigator.pushNamed(context, "/${item.id}");
-        },
-      ),
+        Divider(),
+      ],
     );
   }
 }

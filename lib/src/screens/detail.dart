@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import '../blocs/comments_provider.dart';
+import '../blocs/app_provider.dart';
 import '../models/item_model.dart';
 import '../widgets/comment.dart';
 
@@ -11,13 +11,27 @@ class Detail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bloc = CommentsProvider.of(context);
+    final bloc = AppProvider.commentsBlocOf(context);
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Detail"),
+        iconTheme: IconThemeData(
+          color: Colors.orange[800], //change your color here
+        ),
+        title: Text(
+          "Detail",
+          style: TextStyle(
+            color: Colors.orange[800],
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        elevation: 0,
       ),
-      body: buildBody(bloc),
+      body: Container(
+        color: Colors.white,
+        child: buildBody(bloc),
+      ),
     );
   }
 
